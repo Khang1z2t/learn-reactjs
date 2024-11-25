@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
 import App from "./App";
-import {ThemeProvider} from "./Components/Context/ThemeContext";
+import {StoreProvider} from "./Components/GlobalState/store";
 
 // Fake Comments
 function emitComment(id) {
@@ -28,9 +28,9 @@ root.render(
         <DevSupport ComponentPreviews={ComponentPreviews}
                     useInitialHook={useInitial}
         >
-            <ThemeProvider>
+            <StoreProvider>
                 <App/>
-            </ThemeProvider>
+            </StoreProvider>
         </DevSupport>
     </React.StrictMode>
 );

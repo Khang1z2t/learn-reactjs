@@ -1,7 +1,8 @@
-import Context from "./Components/Context/Context";
+import AppGlobalState from "./Components/GlobalState/AppGlobalState";
+
 
 function App() {
-    return <Context/>
+    return <AppGlobalState/>
 }
 
 export default App;

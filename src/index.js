@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {DevSupport} from "@react-buddy/ide-toolbox";
+import {BrowserRouter} from "react-router";
+
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
 import App from "./App";
 import {StoreProvider} from "./Components/GlobalState/store";
@@ -28,9 +30,11 @@ root.render(
         <DevSupport ComponentPreviews={ComponentPreviews}
                     useInitialHook={useInitial}
         >
-            <StoreProvider>
-                <App/>
-            </StoreProvider>
+            <BrowserRouter>
+                <StoreProvider>
+                    <App/>
+                </StoreProvider>
+            </BrowserRouter>
         </DevSupport>
     </React.StrictMode>
 );
